@@ -17,6 +17,8 @@ REPO="$1"
 [[ "$REPO" != */* ]] && REPO="sterngold/$REPO"
 
 echo "→ Applying strict branch protection to $REPO:main"
+# NOTE: required_signatures is currently FALSE because SSH/GPG signing
+# setup is parked. To require signed commits later: change to true.
 
 gh api -X PUT "repos/$REPO/branches/main/protection" \
   --input - <<'JSON'
@@ -38,7 +40,7 @@ gh api -X PUT "repos/$REPO/branches/main/protection" \
   "required_conversation_resolution": true,
   "lock_branch": false,
   "allow_fork_syncing": false,
-  "required_signatures": true,
+  "required_signatures": false,
   "restrictions": null
 }
 JSON
