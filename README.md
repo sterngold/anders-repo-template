@@ -37,4 +37,4 @@ See [AGENTS.md](./AGENTS.md). The short version: repo conventions belong in the 
 
 ## License
 
-Private template. See [LICENSE](./LICENSE).
+Source available for reference. No reuse license is granted unless you receive written permission; see [LICENSE](./LICENSE).
