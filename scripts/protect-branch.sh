@@ -55,4 +55,5 @@ gh api -X PATCH "repos/$REPO" \
   -F squash_merge_commit_title=PR_TITLE \
   -F squash_merge_commit_message=PR_BODY >/dev/null
 
-echo "✓ $REPO:main protected (signed commits, linear history, ci required, squash-merge only)"
+echo "✓ $REPO:main protected (linear history, ci required, no force-pushes/deletions, squash-merge only)"
+echo "  NOTE: signed commits are not required by this script yet (required_signatures=false)."

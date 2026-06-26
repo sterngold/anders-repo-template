@@ -15,6 +15,9 @@
 - **Makefile** — `make install / build / test / lint / fmt` works across stacks
 - **scripts/** — `new-repo.sh`, `apply-baseline.sh`, `protect-branch.sh`
 
+`release-please` also requires the repository setting that permits GitHub
+Actions to create pull requests. See [docs/template-usage.md](./docs/template-usage.md).
+
 ## Quick start
 
 **New repo:**
