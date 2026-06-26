@@ -41,12 +41,21 @@ After the PR merges, apply branch protection:
 | Conventional Commit titles on PRs | commitlint via GitHub Action |
 | No secrets in commits | gitleaks pre-commit + CI |
 | Lint + test pass | language-specific jobs in ci.yml |
-| Signed commits on main | branch protection |
+| Signed commits on main | manual GitHub setting; `protect-branch.sh` currently leaves `required_signatures=false` |
 | No force-push to main | branch protection |
 | No direct commits to main | branch protection (PR required) |
 | Linear history | branch protection (squash-merge only) |
 | Auto-generated CHANGELOG + version bumps | release-please |
 | Weekly dependency updates | dependabot |
+
+## Required GitHub repository settings
+
+Two controls live in GitHub settings rather than in committed files:
+
+- **Actions -> General -> Workflow permissions:** allow GitHub Actions to create
+  and approve pull requests, otherwise `release-please` cannot open release PRs.
+- **Security -> Private vulnerability reporting:** enable private reports so
+  security issues are not forced into public issues.
 
 ## Per-repo customization
 
