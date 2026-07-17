@@ -31,7 +31,7 @@ before merge.
 
 ## Working rules
 
-- Work in an isolated task checkout: use a new worktree for local app work or
+- Work in an isolated task checkout: use a new worktree for local Copilot work or
   the provider's isolated sandbox for cloud work. Use a task-named branch and
   never push code directly to `main`.
 - Keep changes narrow and template-safe across supported stacks. Stage only reviewed paths,
