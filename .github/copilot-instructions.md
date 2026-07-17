@@ -25,13 +25,16 @@ shellcheck scripts/*.sh
 
 CI also runs Conventional Commit validation and gitleaks. Do not invent an
 application stack or replace template placeholders with assumptions. The
-required aggregate GitHub check is `ci`; it must pass before merge.
+required aggregate GitHub check is `ci`; it covers the repository's lint,
+test, gitleaks, commitlint, ShellCheck, and stack-conditional jobs and must pass
+before merge.
 
 ## Working rules
 
-- Work on a new task-named branch in an isolated checkout or worktree. Never
-  push code directly to `main`.
-- Keep changes template-safe across supported stacks. Stage narrowly using only reviewed paths,
+- Work in an isolated task checkout: use a new worktree for local app work or
+  the provider's isolated sandbox for cloud work. Use a task-named branch and
+  never push code directly to `main`.
+- Keep changes narrow and template-safe across supported stacks. Stage only reviewed paths,
   use Conventional Commits, and do not bypass hooks.
 - Do not add a new top-level dependency or change a dependency manifest or
   lockfile without explicit approval. If approved dependency work is
