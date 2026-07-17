@@ -39,6 +39,7 @@ FILES=(
   .env.example
   CHANGELOG.md
   .github/CODEOWNERS
+  .github/copilot-instructions.md
   .github/pull_request_template.md
   .github/dependabot.yml
   .github/ISSUE_TEMPLATE/bug.md
